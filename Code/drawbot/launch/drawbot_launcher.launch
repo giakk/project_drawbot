@@ -1,0 +1,32 @@
+<launch>
+	
+	<node 
+	pkg="drawbot" 
+	type="path_planner.py" 
+	name="path_planner" 
+	output="screen"
+	launch-prefix="gnome-terminal --command"/>
+	
+	<node pkg="drawbot" 
+	type="math.py" 
+	name="math" 
+	output="screen"
+	launch-prefix="gnome-terminal --command"/>
+	
+	<node pkg="drawbot" 
+	type="localisation_odometry.py" 
+	name="localisation_odometry" 
+	output="screen"
+	launch-prefix="gnome-terminal --command"/>
+	
+	<node pkg="drawbot" 
+	type="drawing_interface.py" 
+	name="drawing_interface" 
+	output="screen"
+	launch-prefix="gnome-terminal --command"/>
+	
+	<node name="complete_motor"        pkg="rosserial_python"      type="serial_node.py">
+    	<param name="port"              type="string"               value="/dev/ttyACM0"/>
+    	</node>
+	
+</launch>

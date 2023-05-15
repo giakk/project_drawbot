@@ -1,0 +1,11 @@
+float32 ref_speed_r
+float32 ref_speed_l
+float32 mesu_speed_r
+float32 mesu_speed_l
+float32 controller_speed_r
+float32 controller_speed_l
+float32 err_speed_r
+float32 err_speed_l
+float32 err_sum_speed_r
+float32 err_sum_speed_l
+float32 time_of_measure
